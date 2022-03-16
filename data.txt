@@ -1,5 +1,8 @@
 header_hexa(cobalt): #3a5069
+
+darker cobalt: #2a3d53
 charcoal: #FBE5C0
 coral: #F88379
 serenity: #D0E6F0
 charcoal(cobalt_like): #4C5D70
+

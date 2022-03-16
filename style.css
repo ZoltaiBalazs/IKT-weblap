@@ -3,7 +3,51 @@
     margin: 0;
 }
 
+body {
+    background-color: whitesmoke;
+}
+
 .header {
- height: 400px; 
- background-image: #3a5069 0,75 url(img/header.png);
+    height: 30vh; 
+    width: 100vw;
+    background-color: rgb(58, 80, 105);
+}
+
+.header-cut {
+    height: 30vh; 
+    width: 100vw;
+    background-color: #2a3d53;
+    position: absolute;
+    clip-path: polygon(100% 0, 100% 69%, 80% 25%, 40% 0);
+}
+
+.header-logo {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    height: 7%;
+}
+
+.header-title {
+    font-family: 'Caveat', cursive;
+    color: #ffee71;
+    letter-spacing: 3px;
+    font-weight: 700;
+    font-size: 60px;
+    text-align: center;
+}
+
+.header-sub-title {
+    font-family: 'Caveat', cursive;
+    color: #D0E6F0;
+    letter-spacing: 3px;
+    font-weight: 400;
+    font-size: 40px;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
