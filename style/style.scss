@@ -27,6 +27,7 @@ $logo-margin: 20px;
     align-items: center;
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -42,7 +43,7 @@ a{
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Comfortaa', sans-serif;
     font-size: 4em;
     background-color: #000d22;
     color: #fff;
@@ -64,26 +65,37 @@ body {
         .outro_screen {
             scroll-snap-align: start;
             height: 100vh;
-            background-color: #000d22;
+            background-color: #060a09;
             z-index: 2;
+            display: flex;
+            justify-content: space-around;
             text-align: center;
+            align-items: center;
+            flex-direction: column;
 
-            h2 {
-                padding-top: 90px;
-                padding-left: 20px;
-                padding-right: 20px;
+            .cards {
+                display: flex;
+                width: 93%;
+                height: 75%;
+                align-items: center;
+                justify-content: space-around;
+
+                .card {
+                    background-color: #222e2b;
+                    border-radius: 2vw;
+                    height: 70%;
+                    width: 20%;
+                    cursor: pointer;
+                    transition: width 0.5s, height 0.5s, background-color 0.5s;
+                }
+                
+                .card:hover {
+                    width: 25%;
+                    height: 75%;
+                    background-color: #ffffff;
+                }
+
             }
-
-            h3 {
-                padding-top: 90px;
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-        }
-
-        #outro1{
-            color: white; 
-            background-color: #005a9b;
         }
         
         .navbar {
@@ -226,8 +238,7 @@ body {
                     position: relative;
                     font-size: 9vw;
                     color: white;
-                    font-family: 'Comfortaa', sans-serif;
-                 
+                                     
                 }
                               
             }
@@ -266,6 +277,17 @@ body {
                 background-image: url("../img/background_1.2/layer_7.png");
                 background-repeat: no-repeat;
                 transform: translateZ($ztrans_7) scale($scale_7);
+            }
+
+
+            @keyframes transin {
+                0% {
+                    transform: translateY(-100vh);
+                }
+
+                100% {
+                    transform: translateY(0);
+                }
             }
         }
     }
