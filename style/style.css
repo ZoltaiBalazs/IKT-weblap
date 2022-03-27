@@ -3,306 +3,214 @@
 @import url("https://fonts.googleapis.com/css2?family=Bahiana&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap");
 * {
-  margin: 0;
-  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
+  margin: 0%;
+  padding: 0%;
 }
 
 ::-webkit-scrollbar {
   width: 0px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Press Start 2P', cursive;
+}
+
 body {
-  font-family: 'Comfortaa', sans-serif;
-  font-size: 4em;
-  background-color: #000d22;
-  color: #fff;
-  width: 100%;
-  overflow: overlay;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body .parallax_wrapper {
-  margin: auto;
-  scroll-behavior: smooth;
-  -ms-scroll-snap-type: y proximity;
-      scroll-snap-type: y proximity;
-  width: 1920px;
-  height: 100vh;
-  position: relative;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  -webkit-perspective: 450px;
-          perspective: 450px;
-}
-
-body .parallax_wrapper .outro_screen {
-  scroll-snap-align: start;
-  height: 100vh;
-  background-color: #060a09;
-  z-index: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-body .parallax_wrapper .outro_screen .cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 93%;
-  height: 75%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-body .parallax_wrapper .outro_screen .cards .card {
-  background-color: #222e2b;
-  border-radius: 2vw;
-  height: 70%;
-  width: 20%;
-  cursor: pointer;
-  -webkit-transition: width 0.5s, height 0.5s, background-color 0.5s;
-  transition: width 0.5s, height 0.5s, background-color 0.5s;
-}
-
-body .parallax_wrapper .outro_screen .cards .card:hover {
-  width: 25%;
-  height: 75%;
-  background-color: #ffffff;
-}
-
-body .parallax_wrapper .navbar {
-  width: 100%;
-  float: left;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
-  left: 0px;
-}
-
-body .parallax_wrapper .navbar .logoholder {
-  position: absolute;
-  background-image: url("../img/logo_1.png");
-  background-size: cover;
-  width: 60px;
-  height: 60px;
-  margin: 20px;
-}
-
-body .parallax_wrapper .navbar .navbar-right {
-  position: absolute;
-  right: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-body .parallax_wrapper .navbar .navbar-right a {
   color: white;
-  display: block;
-  margin: 40px 40px;
-  font-size: 20px;
+  background-color: #158f67;
+  overflow-x: hidden;
+  width: 100%;
 }
 
-body .parallax_wrapper .parallax_group {
+body .cards {
   width: 100vw;
-  max-width: 1920px;
-  position: relative;
   height: 100vh;
-  z-index: -1;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-}
-
-body .parallax_wrapper .parallax_group .parallax_layer {
+  background-color: #00100b;
   position: absolute;
-  inset: 0;
+  top: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-body .parallax_wrapper .parallax_group .layer_1 {
-  background-image: url("../img/background_1.2/layer_1.png");
-  background-repeat: no-repeat;
-  background-position: top center;
-  -webkit-transform: translateZ(-200px) scale(1.44444);
-          transform: translateZ(-200px) scale(1.44444);
-  background-color: transparent;
+body .cards .container {
+  width: 94%;
+  height: 90%;
+  display: -ms-grid;
+  display: grid;
+  gap: 108px 55px;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: .1fr 1fr;
+      grid-template-rows: .1fr 1fr;
+      grid-template-areas: "title title title title" "card1 card2 card3 card4";
 }
 
-body .parallax_wrapper .parallax_group .layer_1 a {
-  font-size: 0px;
+body .cards .container .placeholder:hover {
+  background-color: white;
+  padding: 10px 10px;
 }
 
-body .parallax_wrapper .parallax_group .layer_1 .box {
-  position: absolute;
-  bottom: 10px;
-  width: 40px;
-  height: 100px;
-  border-radius: 20px;
+body .cards .container .placeholder {
+  cursor: pointer;
+  padding: 20px 20px;
+  background-color: #158f67;
+  color: black;
+  border-radius: 30px;
+  -webkit-transition: background-color 0.5s, padding 0.5s;
+  transition: background-color 0.5s, padding 0.5s;
 }
 
-body .parallax_wrapper .parallax_group .layer_1 .box::before,
-body .parallax_wrapper .parallax_group .layer_1 .box::after {
-  content: "";
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  border: 3px solid white;
-  height: 20px;
-  width: 20px;
-  -webkit-transform: translate(-50%, -50%) rotate(45deg);
-          transform: translate(-50%, -50%) rotate(45deg);
-  border-top: transparent;
-  border-left: transparent;
-  -webkit-animation: arrow 1s infinite ease-in-out;
-          animation: arrow 1s infinite ease-in-out;
+body .cards .container .placeholder .idfke {
+  margin: auto;
+  height: 100%;
 }
 
-body .parallax_wrapper .parallax_group .layer_1 .box::after {
-  opacity: 0%;
-  top: 20%;
-  -webkit-animation-delay: .4s;
-          animation-delay: .4s;
+body .cards .container .placeholder .idfke .banner {
+  border-radius: 30px 30px 0px 0px;
+  background-color: rgba(67, 67, 67, 0.2);
+  height: 40%;
 }
 
-@-webkit-keyframes arrow {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  60% {
-    opacity: 1;
-  }
-  100% {
-    top: 85%;
-    opacity: 0;
-  }
+body .cards .container .placeholder .idfke .desc {
+  background-color: rgba(126, 126, 126, 0.2);
+  height: 40%;
 }
 
-@keyframes arrow {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  60% {
-    opacity: 1;
-  }
-  100% {
-    top: 85%;
-    opacity: 0;
-  }
+body .cards .container .placeholder .idfke .interact {
+  border-radius: 0px 0px 30px 30px;
+  background-color: rgba(192, 192, 192, 0.2);
+  height: 20%;
 }
 
-body .parallax_wrapper .parallax_group .layer_1 .socials {
+body .cards .container .placeholder .card1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: card1;
+}
+
+body .cards .container .placeholder .card2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: card2;
+}
+
+body .cards .container .placeholder .card3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: card3;
+}
+
+body .cards .container .placeholder .card4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: card4;
+}
+
+body .cards .container .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: title;
+}
+
+body .cards .container .title h2 {
+  font-size: 5vw;
+}
+
+body .parwrapper {
+  margin: auto;
+  max-width: 1920px;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .parwrapper .parlayer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-position: top center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
   position: absolute;
-  bottom: calc(50% - ((105px + ($logo-margin * 3)) / 2));
-  right: 5px;
+  top: 0px;
+  right: 0px;
 }
 
-body .parallax_wrapper .parallax_group .layer_1 .socials a {
-  font-size: 0px;
+body .parwrapper .layer0 {
+  z-index: 1;
+  background-color: transparent;
 }
 
-body .parallax_wrapper .parallax_group .layer_1 .socials a .social_image {
-  margin-bottom: 20px;
-  width: 35px;
-  height: 35px;
+body .parwrapper .layer1 {
+  background-image: url("../img/background_1.2/layer_1.png");
+  z-index: 0;
 }
 
-body .parallax_wrapper .parallax_group .layer_2 {
-  background-position: top center;
+body .parwrapper .layer2 {
   background-image: url("../img/background_1.2/layer_2.png");
-  background-repeat: no-repeat;
-  -webkit-transform: translateZ(-400px) scale(1.88889);
-          transform: translateZ(-400px) scale(1.88889);
+  z-index: -1;
 }
 
-body .parallax_wrapper .parallax_group .layer_4 {
-  background-position: top center;
-  background-image: url("../img/background_1.2/layer_4.png");
-  background-repeat: no-repeat;
-  -webkit-transform: translateZ(-800px) scale(3.22222);
-          transform: translateZ(-800px) scale(3.22222);
-}
-
-body .parallax_wrapper .parallax_group .layer_4 h1 {
-  position: relative;
-  font-size: 9vw;
-  color: white;
-}
-
-body .parallax_wrapper .parallax_group .layer_5 {
-  background-position: top center;
-  background-image: url("../img/background_1.2/layer_5.png");
-  background-repeat: no-repeat;
-  -webkit-transform: translateZ(-1000px) scale(3.66667);
-          transform: translateZ(-1000px) scale(3.66667);
-}
-
-body .parallax_wrapper .parallax_group .layer_3 {
-  background-position: top center;
+body .parwrapper .layer3 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 5vw;
+  z-index: -2;
   background-image: url("../img/background_1.2/layer_6.3.png");
-  -webkit-transform: translateZ(-600px) scale(2.33333);
-          transform: translateZ(-600px) scale(2.33333);
+  background-repeat: repeat;
   -webkit-animation: snow_fall 75s .1s linear infinite;
           animation: snow_fall 75s .1s linear infinite;
 }
 
-body .parallax_wrapper .parallax_group .layer_6 {
-  background-position: top center;
+body .parwrapper .layer4 {
+  background-image: url("../img/background_1.2/layer_4.png");
+  z-index: -3;
+}
+
+body .parwrapper .layer5 {
+  background-image: url("../img/background_1.2/layer_5.png");
+  z-index: -4;
+}
+
+body .parwrapper .layer6 {
   background-image: url("../img/background_1.2/layer_6.4.png");
-  -webkit-transform: translateZ(-1200px) scale(4.11111);
-          transform: translateZ(-1200px) scale(4.11111);
+  z-index: -5;
+  background-repeat: repeat;
   -webkit-animation: snow_fall 150s .3s linear infinite;
           animation: snow_fall 150s .3s linear infinite;
+}
+
+body .parwrapper .layer7 {
+  background-image: url("../img/background_1.2/layer_7.png");
+  z-index: -6;
 }
 
 @-webkit-keyframes snow_fall {
@@ -323,32 +231,16 @@ body .parallax_wrapper .parallax_group .layer_6 {
   }
 }
 
-body .parallax_wrapper .parallax_group .layer_7 {
-  background-image: url("../img/background_1.2/layer_7.png");
-  background-repeat: no-repeat;
-  -webkit-transform: translateZ(-1400px) scale(4.33333);
-          transform: translateZ(-1400px) scale(4.33333);
-}
-
-@-webkit-keyframes transin {
-  0% {
-    -webkit-transform: translateY(-100vh);
-            transform: translateY(-100vh);
+@media only screen and (max-width: 550px) {
+  .container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: .1fr 1fr 1fr;
+        grid-template-rows: .1fr 1fr 1fr;
+        grid-template-areas: "title title" "card1 card2" "card3 card4";
   }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes transin {
-  0% {
-    -webkit-transform: translateY(-100vh);
-            transform: translateY(-100vh);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+  .cards {
+    height: 200vh;
   }
 }
 /*# sourceMappingURL=style.css.map */
