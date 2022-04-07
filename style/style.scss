@@ -1,203 +1,156 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bahiana&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap");
 
 * {
-    box-sizing: border-box;
-    margin: 0%;
-    padding: 0%;
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
 }
 
 ::-webkit-scrollbar {
-    width: 0px;
+  width: 0px;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-family: 'Press Start 2P', cursive;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Press Start 2P", cursive;
 }
 
 body {
-    color: white;
-    background-color: #158f67;
-    overflow-x: hidden;
-    width: 100%;
+  color: white;
+  background-color: #158f67;
+  overflow-x: hidden;
+  width: 100%;
 
-    .cards{
-        width: 100vw;
-        height: 100vh;
-        background-color: #00100b;
-        position: absolute;
-        top: 100vh;
+  .nav {
+    width: 100vw;
+    height: 100vh;
+    background-color: #00100b;
+    position: relative;
+    top: 100vh;
+
+    .title {
+      width: 100%;
+      height: 20%;
+      background-color: grey;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2vw;
+    }
+
+    .cards {
+      width: 100%;
+      height: 80%;
+      background-color: white;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+
+      .card {
+        width: 350px;
+        height: 600px;
+        background-color: black;
+        border-radius: 30px;
+        margin: 40px;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        flex-direction: column;
 
-        // h2{
-        //     font-size: 5vw;
-        //     padding: 20px;
-        // }
-
-        .container{
-            width: 94%;
-            height: 90%;
-            display: grid;
-            gap: 108px 55px;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: .1fr 1fr;
-            grid-template-areas: 
-             "title title title title"
-             "card1 card2 card3 card4";
-
-            .placeholder:hover{
-               background-color: white;
-               padding: 10px 10px;
-            }
-
-            .placeholder {
-                cursor: pointer;
-                padding: 20px 20px;
-                background-color: #158f67;;
-                color: black;
-                border-radius: 30px;
-                transition: background-color 0.5s, padding 0.5s;
-
-                
-
-                .idfke{
-                    margin: auto;
-                    height: 100%;
-
-                    .banner{
-                        border-radius: 30px 30px 0px 0px;
-                        background-color: rgba(67, 67, 67, 0.2);
-                        height: 40%;
-                    }
-                    .desc{
-                        background-color: rgba(126, 126, 126, 0.2);
-                        height: 40%;
-                    }
-                    .interact{
-                        border-radius: 0px 0px 30px 30px;
-                        background-color: rgba(192, 192, 192, 0.2);
-                        height: 20%;
-                    }
-                }
-                .card1{
-                    grid-area: card1;
-                }
-                .card2{
-                    grid-area: card2;
-                }
-                .card3{
-                    grid-area: card3;            
-                }
-                .card4{
-                    grid-area: card4;
-                }
-            }
-
-            .title {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                h2{
-                    font-size: 5vw;
-                }
-
-                grid-area: title;
-            }
+        .picture {
+          background-color: red;
+          flex-grow: 5;
         }
+
+        .desc {
+          background-color: green;
+          flex-grow: 5;
+        }
+
+        .interact {
+          background-color: blue;
+          flex-grow: 2;
+        }
+      }
+    }
+  }
+
+  .parwrapper {
+    margin: auto;
+    max-width: 1920px;
+    width: 100vw;
+    display: flex;
+
+    .parlayer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-position: top center;
+      background-size: cover;
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+    }
+    .layer0 {
+      z-index: 1;
+      background-color: transparent;
     }
 
-    .parwrapper {
-        margin: auto;
-        max-width: 1920px;
-        width: 100vw;
-        display: flex;
-
-        .parlayer {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-position: top center;
-            background-size: cover;    
-            width: 100%;
-            height: 100vh;
-            position: absolute;
-            top: 0px;
-            right: 0px;
-        }
-        .layer0{
-            z-index: 1;
-            background-color: transparent;
-        }
-
-        .layer1{
-            background-image: url("../img/background_1.2/layer_1.png");
-            z-index: 0;
-        }
-        .layer2{
-            background-image: url("../img/background_1.2/layer_2.png"); 
-            z-index: -1;
-        }
-        .layer3{
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 5vw;
-            z-index: -2;
-
-            background-image: url("../img/background_1.2/layer_6.3.png");     
-            background-repeat: repeat;
-            animation: snow_fall 75s .1s linear infinite;
-        }
-        .layer4{
-            background-image: url("../img/background_1.2/layer_4.png");
-            z-index: -3;
-        }
-        .layer5{
-            background-image: url("../img/background_1.2/layer_5.png"); 
-            z-index: -4;
-        }
-        .layer6{
-            background-image: url("../img/background_1.2/layer_6.4.png");     
-            z-index: -5;
-            background-repeat: repeat;
-            animation: snow_fall 150s .3s linear infinite;
-        }
-
-        .layer7{
-            background-image: url("../img/background_1.2/layer_7.png"); 
-            z-index: -6;
-        }
-
-        @keyframes snow_fall {
-            0%{
-                background-position: 0 0;
-            }
-
-            100%{
-                background-position: 1920px 1080px;
-            }
-            
-        }
+    .layer1 {
+      background-image: url("../img/background_1.2/layer_1.png");
+      z-index: 0;
     }
-}
+    .layer2 {
+      background-image: url("../img/background_1.2/layer_2.png");
+      z-index: -1;
+    }
+    .layer3 {
+      font-family: "Courier New", Courier, monospace;
+      font-size: 5vw;
+      z-index: -2;
 
-@media only screen and (max-width: 550px) {
-    .container{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: .1fr 1fr 1fr;
-        grid-template-areas: 
-         "title title"
-         "card1 card2"
-         "card3 card4";
+      background-image: url("../img/background_1.2/layer_6.3.png");
+      background-repeat: repeat;
+      animation: snow_fall 75s 0.1s linear infinite;
+    }
+    .layer4 {
+      background-image: url("../img/background_1.2/layer_4.png");
+      z-index: -3;
+    }
+    .layer5 {
+      background-image: url("../img/background_1.2/layer_5.png");
+      z-index: -4;
+    }
+    .layer6 {
+      background-image: url("../img/background_1.2/layer_6.4.png");
+      z-index: -5;
+      background-repeat: repeat;
+      animation: snow_fall 150s 0.3s linear infinite;
     }
 
-    .cards{
-
-        height: 200vh;
+    .layer7 {
+      background-image: url("../img/background_1.2/layer_7.png");
+      z-index: -6;
     }
+
+    @keyframes snow_fall {
+      0% {
+        background-position: 0 0;
+      }
+
+      100% {
+        background-position: 1920px 1080px;
+      }
+    }
+  }
 }
