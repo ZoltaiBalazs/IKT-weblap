@@ -140,6 +140,11 @@ body {
       z-index: -6;
     }
 
+    .layer8 {
+      background-image: url("../img/bg_room/lay-8.png");
+      z-index: 1;
+    }
+
     @keyframes snow_fall {
       0% {
         background-position: 0 0;

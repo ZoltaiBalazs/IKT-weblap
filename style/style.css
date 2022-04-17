@@ -179,6 +179,16 @@ body .parwrapper .layer7 {
   z-index: -6;
 }
 
+body .parwrapper .layer8 {
+  background-image: url("../img/bg_room/lay-8.png");
+  z-index: 1;
+}
+
+#shadow {
+  transition: opacity 1s ease-in, width 1s, height 1s, top 1s, left 1s;
+}
+
+
 @-webkit-keyframes snow_fall {
   0% {
     background-position: 0 0;

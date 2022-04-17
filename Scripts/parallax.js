@@ -6,6 +6,7 @@ window.addEventListener("scroll", function(){
     const layer5 = document.querySelector('.layer5');
     const layer6 = document.querySelector('.layer6');
     const layer7 = document.querySelector('.layer7');
+    const layer8 = document.querySelector('.layer8');
 
     let scrollPosition = window.pageYOffset;
 

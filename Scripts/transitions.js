@@ -1,7 +1,7 @@
 const layers = document.getElementsByClassName("parlayer");
 
-window.onload = function () {
-    window.scrollTo(0, 0);
+function fullScreen() {
+    alert("NYOMD MEG AZt a kurVA F11-t\n koszi :)")
 }
 
 function zoomOut() {
@@ -11,7 +11,7 @@ function zoomOut() {
         layers[i].style.top = "0";
         layers[i].style.left = "0";
     }
+    document.getElementById("shadow").style.opacity = "0";
     document.body.style.overflowY = "auto";
     document.body.style.overflowX = "hidden";
-    document.body.style.userSelect = "auto";
 }
