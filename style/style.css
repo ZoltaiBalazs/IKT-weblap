@@ -42,7 +42,6 @@ body .nav {
 body .nav .title {
   width: 100%;
   height: 20%;
-  background-color: grey;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,18 +51,25 @@ body .nav .title {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 2vw;
+  font-size: 3vw;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 body .nav .cards {
   width: 100%;
   height: 80%;
-  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
@@ -71,40 +77,85 @@ body .nav .cards {
           align-items: center;
 }
 
-body .nav .cards .card {
-  width: 350px;
-  height: 600px;
-  background-color: black;
-  border-radius: 30px;
-  margin: 40px;
+body .nav .cards .inbetween {
+  height: 550px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  margin: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body .nav .cards .card .picture {
-  background-color: red;
-  -webkit-box-flex: 5;
-      -ms-flex-positive: 5;
-          flex-grow: 5;
+body .nav .cards .inbetween .card {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  -webkit-transition-property: height;
+  transition-property: height;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
-body .nav .cards .card .desc {
-  background-color: green;
-  -webkit-box-flex: 5;
-      -ms-flex-positive: 5;
-          flex-grow: 5;
+body .nav .cards .inbetween .card .subcard {
+  width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body .nav .cards .card .interact {
-  background-color: blue;
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
+body .nav .cards .inbetween .card .interact {
+  background-color: greenyellow;
+  -webkit-transform: all 0.5s ease;
+          transform: all 0.5s ease;
+  position: absolute;
+  height: 50px;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.45s;
+          transition-duration: 0.45s;
+}
+
+body .nav .cards .inbetween .card .desc {
+  position: absolute;
+  background-color: tomato;
+  height: 150px;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition: ease;
+  transition: ease;
+  -webkit-transition-duration: 0.35s;
+          transition-duration: 0.35s;
+}
+
+body .nav .cards .inbetween .card .picture {
+  position: absolute;
+  height: 350px;
+  background-color: grey;
+}
+
+body .nav .cards .card:hover {
+  height: 550px;
+}
+
+body .nav .cards .card:hover .interact {
+  -webkit-transform: translateY(500px);
+          transform: translateY(500px);
+}
+
+body .nav .cards .card:hover .desc {
+  -webkit-transform: translateY(350px);
+          transform: translateY(350px);
 }
 
 body .parwrapper {
@@ -198,6 +249,45 @@ body .parwrapper .layer7 {
   }
   100% {
     background-position: 1920px 1080px;
+  }
+}
+
+@media only screen and (max-width: 779px) {
+  body .nav {
+    height: 300vh;
+  }
+  body .nav .title {
+    height: 5%;
+    font-size: 4vw;
+  }
+  body .nav .cards {
+    height: 95%;
+  }
+}
+
+@media only screen and (min-width: 780px) and (max-width: 1169px) {
+  body .nav {
+    height: 200vh;
+  }
+  body .nav .title {
+    height: 10%;
+    font-size: 6vw;
+  }
+  body .nav .cards {
+    height: 90%;
+  }
+}
+
+@media only screen and (min-width: 1170px) and (max-width: 1559px) {
+  body .nav {
+    height: 180vh;
+  }
+  body .nav .title {
+    height: 15%;
+    font-size: 4vw;
+  }
+  body .nav .cards {
+    height: 85%;
   }
 }
 /*# sourceMappingURL=style.css.map */
