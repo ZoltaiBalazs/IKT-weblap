@@ -26,8 +26,8 @@ h6 {
 
 body {
   color: white;
-  background-color: #00100b;
-  overflow: hidden;
+  background-color: #158f67;
+  overflow-x: hidden;
   width: 100%;
 }
 
@@ -128,12 +128,11 @@ body .parwrapper .parlayer {
           justify-content: center;
   background-position: top center;
   background-size: cover;
-  width: 300%;
-  height: 300vh;
+  width: 100%;
+  height: 100vh;
   position: absolute;
-  top: -95%;
-  left: -42%;
-  transition: width 1s, height 1s, top 1s, left 1s;
+  top: 0px;
+  right: 0px;
 }
 
 body .parwrapper .layer0 {
@@ -142,12 +141,12 @@ body .parwrapper .layer0 {
 }
 
 body .parwrapper .layer1 {
-  background-image: url("../img/bg_room/lay-1.png");
+  background-image: url("../img/background_1.2/layer_1.png");
   z-index: 0;
 }
 
 body .parwrapper .layer2 {
-  background-image: url("../img/bg_room/lay-2.png");
+  background-image: url("../img/background_1.2/layer_2.png");
   z-index: -1;
 }
 
@@ -155,26 +154,32 @@ body .parwrapper .layer3 {
   font-family: "Courier New", Courier, monospace;
   font-size: 5vw;
   z-index: -2;
-  background-image: url("../img/bg_room/lay-3.png");
+  background-image: url("../img/background_1.2/layer_6.3.png");
+  background-repeat: repeat;
+  -webkit-animation: snow_fall 75s 0.1s linear infinite;
+          animation: snow_fall 75s 0.1s linear infinite;
 }
 
 body .parwrapper .layer4 {
-  background-image: url("../img/bg_room/lay-4.png");
+  background-image: url("../img/background_1.2/layer_4.png");
   z-index: -3;
 }
 
 body .parwrapper .layer5 {
-  background-image: url("../img/bg_room/lay-5.png");
+  background-image: url("../img/background_1.2/layer_5.png");
   z-index: -4;
 }
 
 body .parwrapper .layer6 {
-  background-image: url("../img/bg_room/lay-6.png");
+  background-image: url("../img/background_1.2/layer_6.4.png");
   z-index: -5;
+  background-repeat: repeat;
+  -webkit-animation: snow_fall 150s 0.3s linear infinite;
+          animation: snow_fall 150s 0.3s linear infinite;
 }
 
 body .parwrapper .layer7 {
-  background-image: url("../img/bg_room/lay-7.png");
+  background-image: url("../img/background_1.2/layer_7.png");
   z-index: -6;
 }
 
@@ -196,4 +201,3 @@ body .parwrapper .layer7 {
   }
 }
 /*# sourceMappingURL=style.css.map */
-
