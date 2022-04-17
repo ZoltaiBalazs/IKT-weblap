@@ -9,13 +9,11 @@ window.addEventListener("scroll", function(){
 
     let scrollPosition = window.pageYOffset;
 
-    layer1.style.transform = 'translateY(' + scrollPosition * 0.1 + 'px)';
-    layer2.style.transform = 'translateY(' + scrollPosition * 0.25 + 'px)';
-    layer3.style.transform = 'translateY(' + scrollPosition * 0.40 + 'px)';
-    layer4.style.transform = 'translateY(' + scrollPosition * 0.55 + 'px)';
-    layer5.style.transform = 'translateY(' + scrollPosition * 0.70+ 'px)';
-    layer6.style.transform = 'translateY(' + scrollPosition * 0.85 + 'px)';
+    layer1.style.transform = 'translateY(' + scrollPosition * 0.3 + 'px)';
+    layer2.style.transform = 'translateY(' + scrollPosition * 0.62 + 'px)';
+    layer3.style.transform = 'translateY(' + scrollPosition * 0.78 + 'px)';
+    layer4.style.transform = 'translateY(' + scrollPosition * 0.80 + 'px)';
+    layer5.style.transform = 'translateY(' + scrollPosition * 0.84+ 'px)';
+    layer6.style.transform = 'translateY(' + scrollPosition * 0.92 + 'px)';
     layer7.style.transform = 'translateY(' + scrollPosition * 1 + 'px)';
-
-    console.log(scrollPosition);
 })
