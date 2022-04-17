@@ -5,22 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Style/style.css">
+    <link rel="stylesheet" href="style/style.css">
     <title>Indie Games</title>
 </head>
 
-<body>
-    <div class="parwrapper">
+<body onload="fullScreen();">
+    <div class="parwrapper" onclick="zoomOut()" >
         <div class="parlayer layer0"></div>
         <div class="parlayer layer1"></div>
         <div class="parlayer layer2"></div>
-        <div class="parlayer layer3">
-            <h1>Indie</h1>
-        </div>
+        <div class="parlayer layer3"></div>
         <div class="parlayer layer4"></div>
         <div class="parlayer layer5"></div>
         <div class="parlayer layer6"></div>
         <div class="parlayer layer7"></div>
+        <div class="parlayer layer8" id="shadow"></div>
     </div>
 
     <div class="nav">
@@ -60,6 +59,7 @@
     </div>
 
     <script src="Scripts/parallax.js"></script>
+    <script src="Scripts/transitions.js"></script>
 </body>
 
 </html>

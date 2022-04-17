@@ -130,52 +130,54 @@ body {
       justify-content: center;
       background-position: top center;
       background-size: cover;
-      width: 100%;
-      height: 100vh;
+      width: 300%;
+      height: 300vh;
       position: absolute;
-      top: 0px;
-      right: 0px;
+      top: -95%;
+      left: -42%;
     }
+
     .layer0 {
       z-index: 1;
       background-color: transparent;
     }
 
     .layer1 {
-      background-image: url("../img/background_1.2/layer_1.png");
+      background-image: url("../img/bg_room/lay-1.png");
       z-index: 0;
     }
     .layer2 {
-      background-image: url("../img/background_1.2/layer_2.png");
+      background-image: url("../img/bg_room/lay-2.png");
       z-index: -1;
     }
     .layer3 {
       font-family: "Courier New", Courier, monospace;
       font-size: 5vw;
       z-index: -2;
-
-      background-image: url("../img/background_1.2/layer_6.3.png");
-      background-repeat: repeat;
-      animation: snow_fall 75s 0.1s linear infinite;
+      background-image: url("../img/bg_room/lay-3.png");
     }
     .layer4 {
-      background-image: url("../img/background_1.2/layer_4.png");
+      background-image: url("../img/bg_room/lay-4.png");
       z-index: -3;
     }
     .layer5 {
-      background-image: url("../img/background_1.2/layer_5.png");
+      background-image: url("../img/bg_room/lay-5.png");
       z-index: -4;
     }
     .layer6 {
-      background-image: url("../img/background_1.2/layer_6.4.png");
+      background-image: url("../img/bg_room/lay-6.png");
       z-index: -5;
-      background-repeat: repeat;
-      animation: snow_fall 150s 0.3s linear infinite;
+
     }
 
     .layer7 {
-      background-image: url("../img/background_1.2/layer_7.png");
+      background-image: url("../img/bg_room/lay-7.png");
       z-index: -6;
+    }
+
+    .layer8 {
+      background-image: url("../img/bg_room/lay-8.png");
+      z-index: 1;
     }
 
     @keyframes snow_fall {

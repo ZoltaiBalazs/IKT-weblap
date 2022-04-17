@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bahiana&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Press Start 2P", cursive;
+}
+
+body {
+  color: white;
+  background-color: #158f67;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body .nav {
+  width: 100vw;
+  height: 100vh;
+  background-color: #00100b;
+  position: relative;
+  top: 100vh;
+}
+
+body .nav .title {
+  width: 100%;
+  height: 20%;
+  background-color: grey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2vw;
+}
+
+body .nav .cards {
+  width: 100%;
+  height: 80%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .nav .cards .card {
+  width: 350px;
+  height: 600px;
+  background-color: black;
+  border-radius: 30px;
+  margin: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .nav .cards .card .picture {
+  background-color: red;
+  -webkit-box-flex: 5;
+      -ms-flex-positive: 5;
+          flex-grow: 5;
+}
+
+body .nav .cards .card .desc {
+  background-color: green;
+  -webkit-box-flex: 5;
+      -ms-flex-positive: 5;
+          flex-grow: 5;
+}
+
+body .nav .cards .card .interact {
+  background-color: blue;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+body .parwrapper {
+  margin: auto;
+  max-width: 1920px;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .parwrapper .parlayer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-position: top center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+body .parwrapper .layer0 {
+  z-index: 1;
+  background-color: transparent;
+}
+
+body .parwrapper .layer1 {
+  background-image: url("../img/background_1.2/layer_1.png");
+  z-index: 0;
+}
+
+body .parwrapper .layer2 {
+  background-image: url("../img/background_1.2/layer_2.png");
+  z-index: -1;
+}
+
+body .parwrapper .layer3 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 5vw;
+  z-index: -2;
+  background-image: url("../img/background_1.2/layer_6.3.png");
+  background-repeat: repeat;
+  -webkit-animation: snow_fall 75s 0.1s linear infinite;
+          animation: snow_fall 75s 0.1s linear infinite;
+}
+
+body .parwrapper .layer4 {
+  background-image: url("../img/background_1.2/layer_4.png");
+  z-index: -3;
+}
+
+body .parwrapper .layer5 {
+  background-image: url("../img/background_1.2/layer_5.png");
+  z-index: -4;
+}
+
+body .parwrapper .layer6 {
+  background-image: url("../img/background_1.2/layer_6.4.png");
+  z-index: -5;
+  background-repeat: repeat;
+  -webkit-animation: snow_fall 150s 0.3s linear infinite;
+          animation: snow_fall 150s 0.3s linear infinite;
+}
+
+body .parwrapper .layer7 {
+  background-image: url("../img/background_1.2/layer_7.png");
+  z-index: -6;
+}
+
+@-webkit-keyframes snow_fall {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1920px 1080px;
+  }
+}
+
+@keyframes snow_fall {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1920px 1080px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
