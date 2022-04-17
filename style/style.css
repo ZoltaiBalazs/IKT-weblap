@@ -27,7 +27,8 @@ h6 {
 body {
   color: white;
   background-color: #00100b;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
   width: 100%;
 }
 
