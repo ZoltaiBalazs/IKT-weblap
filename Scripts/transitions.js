@@ -1,14 +1,9 @@
 const layers = document.getElementsByClassName("parlayer");
 
-function fullScreen() {
-    if (history.scrollRestoration) {
-        history.scrollRestoration = 'manual';
-    } else {
-        window.onbeforeunload = function () {
-            window.scrollTo(0, 0);
-        }
-    }
+window.onload =  function () {
+    
     alert("NYOMD MEG AZt a kurVA F11-t\n koszi :)")
+
 }
 
 function zoomOut() {
@@ -27,4 +22,5 @@ function zoomOut() {
 }
 
 window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
 }

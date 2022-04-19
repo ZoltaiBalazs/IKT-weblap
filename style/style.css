@@ -153,7 +153,8 @@ body .nav .cards .inbetween .card .picture {
 
 body .nav .cards .inbetween .card #undertale {
   background-image: url("../img/cards/undertale.jpeg");
-  background-position: -200px;
+  background-size: calc(1000px - 50%);
+  background-position: -100px;
 }
 
 body .nav .cards .inbetween .card #unravel {
