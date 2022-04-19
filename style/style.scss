@@ -26,14 +26,15 @@ h6 {
 
 body {
   color: white;
-  background-color: #158f67;
+  background-color: #00100b;
   overflow-x: hidden;
+  overflow-y: hidden;
   width: 100%;
 
   .nav {
     width: 100vw;
     height: 100vh;
-    background-color: #00100b;
+    background-color: #000a0e;
     position: relative;
     top: 100vh;
 
@@ -46,6 +47,7 @@ body {
       font-size: 3vw;
       transition-property: all;
       transition-duration: 0.5s;
+      transition: border-radious .01s;
     }
     
     .cards {
@@ -59,7 +61,7 @@ body {
       align-items: center;
 
       .inbetween{
-        height: 550px;
+        height: 600px;
         display: flex;
         margin: 20px;
         align-items: center;
@@ -68,52 +70,88 @@ body {
             position: relative;
             width: 350px;
             height: 350px;
-            transition-property: height;
-            transition-duration: 0.5s;
+            transition: height .5s, transform .5s;
 
             .subcard{
                 width: 350px;
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
             }
 
             .interact{
-                background-color: greenyellow;
-                transform: all 0.5s ease;
+                background-color: rgb(38, 59, 71);
+                transform: all 0.5s linear;
                 position: absolute;
                 height: 50px;
-                transition-property: transform;
-                transition-duration: 0.45s;
+                transition: transform .45s, width .5s;
             }
 
             .desc{
                 position: absolute;
-                background-color: tomato;
+                background-color: rgb(39, 20, 37);
                 height: 150px;
-                transition-property: transform;
-                transition: ease;
-                transition-duration: 0.35s;
+                transition: transform .35s, width .5s;
             }
 
             .picture{
                 position: absolute;
                 height: 350px;
-                background-color: grey;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                background-color: black;
+                transition: width .5s, height .5s, filter .45s;
+                filter: grayscale(100%) brightness(50%);
+            }
 
+            #undertale {
+              background-image: url("../img/cards/undertale.jpeg");
+              background-position: -200px;
+
+            }
+            #unravel {
+              background-image: url("../img/cards/unravel.jpeg");
+              background-size: calc(700px + 10%);
+              background-position: -200px;
+            }
+            #starDV {
+              background-image: url("../img/cards/sdv.jpg");
+              background-size: calc(400px + 30%);
+              background-position-x: -75px;
+              background-position-y: -60px;
             }
         }
     }
 
     .card:hover {
         height: 550px;
+        transform: translateX(-25px);
     }
+
+    .card:hover .picture {
+      height: 400px;
+      width: 400px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      filter: grayscale(0%);
+    }
+
     .card:hover .interact{
         transform: translateY(500px);
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        width: 400px;
     }
 
     .card:hover .desc{
         transform: translateY(350px);
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        width: 400px;
     }
 
     }
@@ -135,6 +173,7 @@ body {
       position: absolute;
       top: -95%;
       left: -42%;
+      transition: width 1s, height 1s, top 1s, left 1s;
     }
 
     .layer0 {
@@ -178,6 +217,10 @@ body {
     .layer8 {
       background-image: url("../img/bg_room/lay-8.png");
       z-index: 1;
+    }
+
+    #shadow {
+      transition: opacity 1s ease-in, width 1s, height 1s, top 1s, left 1s;
     }
 
     @keyframes snow_fall {

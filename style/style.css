@@ -35,7 +35,7 @@ body {
 body .nav {
   width: 100vw;
   height: 100vh;
-  background-color: #00100b;
+  background-color: #000a0e;
   position: relative;
   top: 100vh;
 }
@@ -57,6 +57,8 @@ body .nav .title {
   transition-property: all;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
+  -webkit-transition: border-radious .01s;
+  transition: border-radious .01s;
 }
 
 body .nav .cards {
@@ -79,7 +81,7 @@ body .nav .cards {
 }
 
 body .nav .cards .inbetween {
-  height: 550px;
+  height: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,10 +95,10 @@ body .nav .cards .inbetween .card {
   position: relative;
   width: 350px;
   height: 350px;
-  -webkit-transition-property: height;
-  transition-property: height;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  -webkit-transition: height .5s, -webkit-transform .5s;
+  transition: height .5s, -webkit-transform .5s;
+  transition: height .5s, transform .5s;
+  transition: height .5s, transform .5s, -webkit-transform .5s;
 }
 
 body .nav .cards .inbetween .card .subcard {
@@ -109,54 +111,95 @@ body .nav .cards .inbetween .card .subcard {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 body .nav .cards .inbetween .card .interact {
-  background-color: greenyellow;
-  -webkit-transform: all 0.5s ease;
-          transform: all 0.5s ease;
+  background-color: #263b47;
+  -webkit-transform: all 0.5s linear;
+          transform: all 0.5s linear;
   position: absolute;
   height: 50px;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-transition-duration: 0.45s;
-          transition-duration: 0.45s;
+  -webkit-transition: width .5s, -webkit-transform .45s;
+  transition: width .5s, -webkit-transform .45s;
+  transition: transform .45s, width .5s;
+  transition: transform .45s, width .5s, -webkit-transform .45s;
 }
 
 body .nav .cards .inbetween .card .desc {
   position: absolute;
-  background-color: tomato;
+  background-color: #271425;
   height: 150px;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-transition: ease;
-  transition: ease;
-  -webkit-transition-duration: 0.35s;
-          transition-duration: 0.35s;
+  -webkit-transition: width .5s, -webkit-transform .35s;
+  transition: width .5s, -webkit-transform .35s;
+  transition: transform .35s, width .5s;
+  transition: transform .35s, width .5s, -webkit-transform .35s;
 }
 
 body .nav .cards .inbetween .card .picture {
   position: absolute;
   height: 350px;
-  background-color: grey;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: black;
+  -webkit-transition: width .5s, height .5s, -webkit-filter .45s;
+  transition: width .5s, height .5s, -webkit-filter .45s;
+  transition: width .5s, height .5s, filter .45s;
+  transition: width .5s, height .5s, filter .45s, -webkit-filter .45s;
+  -webkit-filter: grayscale(100%) brightness(50%);
+          filter: grayscale(100%) brightness(50%);
+}
+
+body .nav .cards .inbetween .card #undertale {
+  background-image: url("../img/cards/undertale.jpeg");
+  background-position: -200px;
+}
+
+body .nav .cards .inbetween .card #unravel {
+  background-image: url("../img/cards/unravel.jpeg");
+  background-size: calc(700px + 10%);
+  background-position: -200px;
+}
+
+body .nav .cards .inbetween .card #starDV {
+  background-image: url("../img/cards/sdv.jpg");
+  background-size: calc(400px + 30%);
+  background-position-x: -75px;
+  background-position-y: -60px;
 }
 
 body .nav .cards .card:hover {
   height: 550px;
+  -webkit-transform: translateX(-25px);
+          transform: translateX(-25px);
+}
+
+body .nav .cards .card:hover .picture {
+  height: 400px;
+  width: 400px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
 }
 
 body .nav .cards .card:hover .interact {
   -webkit-transform: translateY(500px);
           transform: translateY(500px);
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 400px;
 }
 
 body .nav .cards .card:hover .desc {
   -webkit-transform: translateY(350px);
           transform: translateY(350px);
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  width: 400px;
 }
 
 body .parwrapper {
@@ -185,6 +228,7 @@ body .parwrapper .parlayer {
   position: absolute;
   top: -95%;
   left: -42%;
+  -webkit-transition: width 1s, height 1s, top 1s, left 1s;
   transition: width 1s, height 1s, top 1s, left 1s;
 }
 
@@ -235,10 +279,10 @@ body .parwrapper .layer8 {
   z-index: 1;
 }
 
-#shadow {
+body .parwrapper #shadow {
+  -webkit-transition: opacity 1s ease-in, width 1s, height 1s, top 1s, left 1s;
   transition: opacity 1s ease-in, width 1s, height 1s, top 1s, left 1s;
 }
-
 
 @-webkit-keyframes snow_fall {
   0% {
