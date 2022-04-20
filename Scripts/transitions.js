@@ -14,6 +14,8 @@ function zoomOut() {
         layers[i].style.left = "0";
     }
     document.getElementById("shadow").style.opacity = "0";
+    document.getElementById("indie_g").style.opacity = "100%";
+    document.getElementById("indie_g").style.transform = "translateY(-200px)";
     setTimeout(function () { 
         document.body.style.overflowY = "auto";
         document.body.style.overflowX = "hidden";

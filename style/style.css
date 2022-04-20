@@ -127,6 +127,21 @@ body .nav .cards .inbetween .card .interact {
   transition: transform .45s, width .5s, -webkit-transform .45s;
 }
 
+body .nav .cards .inbetween .card .interact a {
+  color: #8497a7;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Roboto";
+  -webkit-transition: font-size .19s, color .1s;
+  transition: font-size .19s, color .1s;
+}
+
+body .nav .cards .inbetween .card .interact a:hover {
+  color: #ccf0f5;
+  font-size: 25px;
+}
+
 body .nav .cards .inbetween .card .desc {
   position: absolute;
   background-color: #271425;
@@ -135,6 +150,11 @@ body .nav .cards .inbetween .card .desc {
   transition: width .5s, -webkit-transform .35s;
   transition: transform .35s, width .5s;
   transition: transform .35s, width .5s, -webkit-transform .35s;
+}
+
+body .nav .cards .inbetween .card .desc p {
+  text-align: center;
+  font-family: "Roboto";
 }
 
 body .nav .cards .inbetween .card .picture {
@@ -186,8 +206,8 @@ body .nav .cards .card:hover .picture {
 }
 
 body .nav .cards .card:hover .interact {
-  -webkit-transform: translateY(500px);
-          transform: translateY(500px);
+  -webkit-transform: translateY(550px);
+          transform: translateY(550px);
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 10px;
@@ -196,8 +216,8 @@ body .nav .cards .card:hover .interact {
 }
 
 body .nav .cards .card:hover .desc {
-  -webkit-transform: translateY(350px);
-          transform: translateY(350px);
+  -webkit-transform: translateY(400px);
+          transform: translateY(400px);
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   width: 400px;
@@ -263,6 +283,15 @@ body .parwrapper .layer4 {
 body .parwrapper .layer5 {
   background-image: url("../img/bg_room/lay-5.png");
   z-index: -4;
+}
+
+body .parwrapper .layer5 #indie_g {
+  font-size: 100px;
+  opacity: 0%;
+  -webkit-transition: opacity .2s, -webkit-transform .5s;
+  transition: opacity .2s, -webkit-transform .5s;
+  transition: transform .5s, opacity .2s;
+  transition: transform .5s, opacity .2s, -webkit-transform .5s;
 }
 
 body .parwrapper .layer6 {

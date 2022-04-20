@@ -87,6 +87,20 @@ body {
                 position: absolute;
                 height: 50px;
                 transition: transform .45s, width .5s;
+
+                a {
+                  color: rgb(132, 151, 167);
+                  text-decoration: none;
+                  font-weight: bold;
+                  font-size: 20px;
+                  font-family: "Roboto";
+                  transition: font-size .19s, color .1s;
+                }
+
+                a:hover {
+                  color: rgb(204, 240, 245);
+                  font-size: 25px;
+                }
             }
 
             .desc{
@@ -94,6 +108,11 @@ body {
                 background-color: rgb(39, 20, 37);
                 height: 150px;
                 transition: transform .35s, width .5s;
+
+                p {
+                  text-align: center;
+                  font-family: "Roboto";
+                }
             }
 
             .picture{
@@ -140,7 +159,7 @@ body {
     }
 
     .card:hover .interact{
-        transform: translateY(500px);
+        transform: translateY(550px);
         border-top-left-radius: 0px;
         border-top-right-radius: 0px;
         border-bottom-left-radius: 10px;
@@ -149,7 +168,7 @@ body {
     }
 
     .card:hover .desc{
-        transform: translateY(350px);
+        transform: translateY(400px);
         border-top-left-radius: 0px;
         border-top-right-radius: 0px;
         width: 400px;
@@ -203,6 +222,12 @@ body {
     .layer5 {
       background-image: url("../img/bg_room/lay-5.png");
       z-index: -4;
+
+      #indie_g {
+        font-size: 100px;
+        opacity: 0%;
+        transition: transform .5s, opacity .2s;
+      }
     }
     .layer6 {
       background-image: url("../img/bg_room/lay-6.png");
