@@ -9,13 +9,31 @@
     width: 100vw;
     height: 100vh;
 }
-
+/* 
 @keyframes c_1 {
     0% {
-        left: 65wv;
+        left: 65vw;
     }
     100% {
-        left: 65vw;
+        left: -20vw;
+    }
+} */
+
+@keyframes cloude {
+    0% {
+        left: 100vw;
+    }
+    100% {
+        left: -20vw;
+    }
+}
+
+@keyframes big_boah {
+    0% {
+        left: 100vw;
+    }
+    100% {
+        left: -25vw;
     }
 }
 
@@ -34,65 +52,79 @@
 #c_1 {
     position: absolute;
     top: 15vh;
-    left: 65vw;
+    left: 100vw;
     width: 25%;
-    animation: c_1 10s linear infinite
+    animation:cloude 12s linear infinite;
 }
 
 #c_1_2 {
     position: absolute;
     top: 35vh;
-    left: 0vw;
+    left: 100vw;
     width: 25%;
+    animation:cloude 12s linear infinite;
+    animation-delay: 5s;
 }
 
 #c_2 {
     position: absolute;
     top: 5vh;
-    left: 15vh;
+    left: 100vw;
     width: 25%;
+    animation:big_boah 15s linear infinite;
+    animation-delay: 1s;
 }
 
 #c_3 {
     position: absolute;
     top: 80vh;
-    left: 0vh;
+    left: 100vw;
     width: 25%;
+    animation:cloude 20s linear infinite;
+    animation-delay: 1.5s;
 }
 
 #c_4 {
     position: absolute;
     width: 25%;
     top: 60vh;
-    left: 30vh;
+    left: 100vw;
+    animation:big_boah 11s linear infinite;    
 }
 
 #c_4_2 {
     position: absolute;
     width: 25%;
     top: 50vh;
-    left: 70vw;
+    left: 100vw;
+    animation:big_boah 17s linear infinite;
+    animation-delay: 3s;
 }
 
 #c_5 {
     position: absolute;
     width: 25%;
     top: 40vh;
-    left: 80vh;
+    left: 100vw;
+    animation:cloude 14s linear infinite;
+    animation-delay: 2s;
 }
 
 #c_6 {
     position: absolute;
     width: 25%;
     top: 40vh;
-    left: 80vh;
+    left: 100vw;
+    animation:big_boah 12s linear infinite;
 }
 
 #c_7 {
     position: absolute;
     width: 25%;
     top: 70vh;
-    left: 60vw;
+    left: 100vw;
+    animation:cloude 14s linear infinite;
+    animation-delay: 2s;
 }
 
 .navbar {
@@ -100,8 +132,8 @@
 }
 
 nav {
-    width: fit-content;
-    height: fit-content;
+    width: 50px;
+    height: 50px;
     z-index: 2;
 }
 
@@ -112,24 +144,57 @@ nav {
 
 #nav_element_1 {
     position: absolute;
+    height: fit-content;
+    width: fit-content;
     top: 75vh;
-    left: 20vw;
+    left: 20.5vw;
 }
 
 #nav_element_2 {
     position: absolute;
+    height: fit-content;
+    width: fit-content;
     top: 75vh;
-    left: 34vw;
+    left: 34.5vw;
 }
 
 #nav_element_3 {
     position: absolute;
-    top: 74.5vh;
-    left: 48vw;
+    height: fit-content;
+    width: fit-content;
+    top: 75vh;
+    left: 48.5vw;
 }
 
 #nav_element_4 {
     position: absolute;
+    height: fit-content;
+    width: fit-content;
     top: 75vh;
-    left: 66vw;
+    left: 62.5vw;
+}
+
+#nav_element_5 {
+    position: absolute;
+    height: fit-content;
+    width: fit-content;
+    left: 75.1vw;
+    top: 85vh;
+}
+
+/* #nav_element_5 a {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    left: -35.4vh;
+    top: -20vh;
+} */
+
+
+#nav_element_6 {
+    position: absolute;
+    height: fit-content;
+    width: fit-content;
+    left: 75.5vw;
+    top: 75.7vh;
 }
